@@ -11,8 +11,8 @@ const Hero = () => {
       id="home"
       className={`pt-16 min-h-screen flex items-center ${
         darkMode
-          ? "bg-linear-to-br from-gray-900 to-gray-800"
-          : "bg-linear-to-br from-purple-200 via-blue-200 to-indigo-300"
+          ? "bg-linear-to-br from-slate-900 via-purple-900 to-slate-800"
+          : "bg-linear-to-br from-indigo-300 via-purple-300 to-pink-300"
       }`}
     >
       <div className="w-full px-4 text-center">
@@ -49,14 +49,14 @@ const Hero = () => {
           >
             <a
               href="#contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-colors inline-flex items-center justify-center group"
+              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-colors inline-flex items-center justify-center group"
             >
               Get Started
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href="#services"
-              className="border-2 border-blue-600 text-blue-600 dark:text-blue-400 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
+              className="border-2 border-purple-600 text-purple-600 dark:text-purple-400 px-8 py-4 rounded-full font-semibold text-lg hover:bg-purple-600 hover:text-white transition-colors"
             >
               Our Services
             </a>

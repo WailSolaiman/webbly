@@ -15,37 +15,37 @@ const Services = () => {
 
   const services = [
     {
-      icon: <Code className="w-12 h-12 text-blue-600" />,
+      icon: <Code className="w-12 h-12 text-purple-600" />,
       title: "Web Development",
       description:
         "Custom websites built with modern frameworks like React, Next.js, and Node.js.",
     },
     {
-      icon: <Globe className="w-12 h-12 text-blue-600" />,
+      icon: <Globe className="w-12 h-12 text-purple-600" />,
       title: "Web Design",
       description:
         "Beautiful, responsive designs that engage users and enhance brand identity.",
     },
     {
-      icon: <Zap className="w-12 h-12 text-blue-600" />,
+      icon: <Zap className="w-12 h-12 text-purple-600" />,
       title: "Performance Optimization",
       description:
         "Fast-loading websites with SEO optimization for better Google rankings.",
     },
     {
-      icon: <Smartphone className="w-12 h-12 text-blue-600" />,
+      icon: <Smartphone className="w-12 h-12 text-purple-600" />,
       title: "Mobile Optimization",
       description:
         "Ensure your site looks great on all devices with mobile-first design.",
     },
     {
-      icon: <ShoppingCart className="w-12 h-12 text-blue-600" />,
+      icon: <ShoppingCart className="w-12 h-12 text-purple-600" />,
       title: "E-Commerce Solutions",
       description:
         "Build robust online stores with secure payments and inventory management.",
     },
     {
-      icon: <Search className="w-12 h-12 text-blue-600" />,
+      icon: <Search className="w-12 h-12 text-purple-600" />,
       title: "SEO Services",
       description:
         "Improve visibility and drive organic traffic with strategic SEO tactics.",

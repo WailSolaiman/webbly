@@ -8,17 +8,17 @@ const About = () => {
 
   const stats = [
     {
-      icon: <Users className="w-8 h-8 text-blue-600" />,
+      icon: <Users className="w-8 h-8 text-purple-600" />,
       number: "200+",
       label: "Happy Clients",
     },
     {
-      icon: <Award className="w-8 h-8 text-blue-600" />,
+      icon: <Award className="w-8 h-8 text-purple-600" />,
       number: "50+",
       label: "Projects Completed",
     },
     {
-      icon: <Clock className="w-8 h-8 text-blue-600" />,
+      icon: <Clock className="w-8 h-8 text-purple-600" />,
       number: "5+",
       label: "Years Experience",
     },

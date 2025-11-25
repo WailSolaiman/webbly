@@ -16,7 +16,7 @@ const Header = () => {
           darkMode ? "text-white" : "text-gray-900"
         }`}
       >
-        <a href="#home" className="text-2xl font-bold text-blue-600">
+        <a href="#home" className="text-2xl font-bold text-purple-600">
           Webbly
         </a>
         <ul className="hidden md:flex space-x-6">
