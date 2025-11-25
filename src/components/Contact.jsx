@@ -1,8 +1,11 @@
-import React, { useState } from "react"
+import { useContext, useState } from "react"
 import { motion } from "framer-motion"
 import { Mail, Phone, MapPin, Send } from "lucide-react"
+import ThemeContext from "../context/ThemeContext"
 
 const Contact = () => {
+  const { darkMode } = useContext(ThemeContext)
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -36,8 +39,11 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-gray-800">
-      <div className="container mx-auto px-4">
+    <section
+      id="contact"
+      className={`py-20 ${darkMode ? "bg-gray-800" : "bg-white"}`}
+    >
+      <div className="max-w-7xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -45,10 +51,18 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2
+            className={`text-4xl md:text-5xl font-bold mb-4 ${
+              darkMode ? "text-white" : "text-gray-900"
+            }`}
+          >
             Get In Touch
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p
+            className={`text-lg max-w-2xl mx-auto ${
+              darkMode ? "text-gray-300" : "text-gray-600"
+            }`}
+          >
             Ready to start your next project? Reach out and let's create
             something amazing together.
           </p>
@@ -61,10 +75,16 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
+            <h3
+              className={`text-2xl font-semibold mb-6 ${
+                darkMode ? "text-white" : "text-gray-900"
+              }`}
+            >
               Let's Start a Conversation
             </h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-8">
+            <p
+              className={`mb-8 ${darkMode ? "text-gray-300" : "text-gray-600"}`}
+            >
               We're here to help bring your ideas to life. Send us a message and
               we'll respond promptly.
             </p>
@@ -97,7 +117,11 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   placeholder="Your Name"
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                    darkMode
+                      ? "border-gray-600 bg-gray-700 text-white"
+                      : "border-gray-300 bg-white text-gray-900"
+                  }`}
                 />
               </div>
               <div>

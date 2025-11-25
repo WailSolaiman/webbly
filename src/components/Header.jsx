@@ -1,24 +1,31 @@
-import React, { useContext } from "react"
-import { ThemeContext } from "../context/ThemeContext"
+import { useContext } from "react"
+import ThemeContext from "../context/ThemeContext"
 import { Moon, Sun } from "lucide-react"
 
 const Header = () => {
-  const { darkMode, toggleTheme } = useContext(ThemeContext)
+  const { darkMode, toggleDarkMode } = useContext(ThemeContext)
 
   return (
-    <header className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-md z-10">
-      <nav className="container mx-auto flex justify-between items-center p-4">
-        <a
-          href="#home"
-          className="text-2xl font-bold text-blue-600 dark:text-blue-400"
-        >
+    <header
+      className={`fixed top-0 w-full shadow-md z-10 ${
+        darkMode ? "bg-gray-800" : "bg-white"
+      }`}
+    >
+      <nav
+        className={`container mx-auto flex justify-between items-center p-4 ${
+          darkMode ? "text-white" : "text-gray-900"
+        }`}
+      >
+        <a href="#home" className="text-2xl font-bold text-blue-600">
           Webbly
         </a>
         <ul className="hidden md:flex space-x-6">
           <li>
             <a
               href="#home"
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors"
+              className={`hover:text-blue-600 transition-colors ${
+                darkMode ? "text-white" : "text-gray-700"
+              }`}
             >
               Home
             </a>
@@ -26,7 +33,9 @@ const Header = () => {
           <li>
             <a
               href="#services"
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors"
+              className={`hover:text-blue-600 transition-colors ${
+                darkMode ? "text-white" : "text-gray-700"
+              }`}
             >
               Services
             </a>
@@ -34,7 +43,9 @@ const Header = () => {
           <li>
             <a
               href="#about"
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors"
+              className={`hover:text-blue-600 transition-colors ${
+                darkMode ? "text-white" : "text-gray-700"
+              }`}
             >
               About
             </a>
@@ -42,20 +53,19 @@ const Header = () => {
           <li>
             <a
               href="#contact"
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors"
+              className={`hover:text-blue-600 transition-colors ${
+                darkMode ? "text-white" : "text-gray-700"
+              }`}
             >
               Contact
             </a>
           </li>
         </ul>
-        <button
-          onClick={toggleTheme}
-          className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
-        >
+        <button onClick={toggleDarkMode} className="p-2 rounded-full">
           {darkMode ? (
-            <Sun className="w-6 h-6 text-yellow-400" />
+            <Sun className="w-6 h-6 text-yellow-500" />
           ) : (
-            <Moon className="w-6 h-6 text-blue-600" />
+            <Moon className="w-6 h-6 text-gray-700" />
           )}
         </button>
       </nav>

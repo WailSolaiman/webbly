@@ -1,25 +1,43 @@
+import { useContext } from "react"
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
+import ThemeContext from "../context/ThemeContext"
 
 const Hero = () => {
+  const { darkMode } = useContext(ThemeContext)
+
   return (
     <section
       id="home"
-      className="pt-16 min-h-screen flex items-center bg-gradient-to-br from-purple-200 via-blue-200 to-indigo-300 dark:from-gray-900 dark:to-gray-800"
+      className={`pt-16 min-h-screen flex items-center ${
+        darkMode
+          ? "bg-linear-to-br from-gray-900 to-gray-800"
+          : "bg-linear-to-br from-purple-200 via-blue-200 to-indigo-300"
+      }`}
     >
-      <div className="max-w-7xl mx-auto px-4 text-center">
+      <div className="w-full px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto"
         >
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6">
+          <h1
+            className={`text-5xl md:text-7xl font-bold mb-6 ${
+              darkMode ? "text-white" : "text-gray-900"
+            }`}
+          >
             Elevate Your{" "}
-            <span className="text-blue-600 dark:text-blue-400">Business</span>{" "}
+            <span className={`${darkMode ? "text-blue-400" : "text-blue-600"}`}>
+              Business
+            </span>{" "}
             with Webbly
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p
+            className={`text-lg md:text-xl mb-8 max-w-2xl mx-auto ${
+              darkMode ? "text-gray-300" : "text-gray-600"
+            }`}
+          >
             Professional web design and development services to create stunning,
             high-converting websites that drive results.
           </p>

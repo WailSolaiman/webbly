@@ -1,3 +1,4 @@
+import { useContext } from "react"
 import { motion } from "framer-motion"
 import {
   Code,
@@ -7,8 +8,11 @@ import {
   ShoppingCart,
   Search,
 } from "lucide-react"
+import ThemeContext from "../context/ThemeContext"
 
 const Services = () => {
+  const { darkMode } = useContext(ThemeContext)
+
   const services = [
     {
       icon: <Code className="w-12 h-12 text-blue-600" />,
@@ -64,7 +68,10 @@ const Services = () => {
   }
 
   return (
-    <section id="services" className="py-20 bg-white dark:bg-gray-800">
+    <section
+      id="services"
+      className={`py-20 ${darkMode ? "bg-gray-800" : "bg-white"}`}
+    >
       <div className="max-w-7xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -73,10 +80,18 @@ const Services = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2
+            className={`text-4xl md:text-5xl font-bold mb-4 ${
+              darkMode ? "text-white" : "text-gray-900"
+            }`}
+          >
             Our Services
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p
+            className={`text-lg max-w-2xl mx-auto ${
+              darkMode ? "text-gray-300" : "text-gray-600"
+            }`}
+          >
             Comprehensive web solutions to help your business thrive in the
             digital world.
           </p>
@@ -95,13 +110,19 @@ const Services = () => {
               variants={itemVariants}
               whileHover={{ y: -10 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="bg-gray-50 dark:bg-gray-700 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+              className={`p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow ${
+                darkMode ? "bg-gray-700" : "bg-gray-50"
+              }`}
             >
               <div className="mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+              <h3
+                className={`text-xl font-semibold mb-2 ${
+                  darkMode ? "text-white" : "text-gray-900"
+                }`}
+              >
                 {service.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className={`${darkMode ? "text-gray-300" : "text-gray-600"}`}>
                 {service.description}
               </p>
             </motion.div>
