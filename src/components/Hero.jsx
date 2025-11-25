@@ -5,9 +5,9 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="pt-16 min-h-screen flex items-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800"
+      className="pt-16 min-h-screen flex items-center bg-gradient-to-br from-purple-200 via-blue-200 to-indigo-300 dark:from-gray-900 dark:to-gray-800"
     >
-      <div className="container mx-auto px-4 text-center">
+      <div className="max-w-7xl mx-auto px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
