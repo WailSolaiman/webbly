@@ -5,3 +5,4 @@ dist/
 .vscode/
 .DS_Store
 .git_disabled/
+.git_disabled
