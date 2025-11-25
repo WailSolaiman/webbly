@@ -108,7 +108,7 @@ webbly/
 
 This project is configured for easy deployment on Vercel. Push changes to the master branch, and Vercel will auto-deploy.
 
-Deployed version: [https://webbly.vercel.app](https://webbly.vercel.app)
+Deployed version: [https://webbly-ws.vercel.app](https://webbly-ws.vercel.app)
 
 ## Contributing
 
