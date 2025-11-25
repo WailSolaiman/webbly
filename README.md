@@ -17,7 +17,7 @@ Webbly is a sleek, one-page website showcasing web development and design servic
 - **Vite**: Fast build tool and development server.
 - **Tailwind CSS v4**: Utility-first CSS framework with dark mode.
 - **Framer Motion**: Animation library for smooth transitions.
-- **Lucide React**: Scalable SVG icons.
+- **React Icons**: Comprehensive icon library (replacing Lucide React).
 
 ## Getting Started
 
@@ -70,12 +70,26 @@ webbly/
 ├── src/
 │   ├── assets/
 │   ├── components/
+│   │   ├── contact/
+│   │   │   ├── ContactForm.jsx
+│   │   │   └── ContactMethods.jsx
+│   │   ├── footer/
+│   │   │   ├── FooterBottom.jsx
+│   │   │   ├── FooterBrand.jsx
+│   │   │   ├── FooterLinkSection.jsx
+│   │   │   └── FooterNewsletter.jsx
+│   │   ├── testimonials/
+│   │   │   ├── TestimonialCard.jsx
+│   │   │   └── TestimonialTrustBadges.jsx
 │   │   ├── About.jsx
 │   │   ├── Contact.jsx
 │   │   ├── Footer.jsx
 │   │   ├── Header.jsx
 │   │   ├── Hero.jsx
-│   │   └── Services.jsx
+│   │   ├── Portfolio.jsx
+│   │   ├── Process.jsx
+│   │   ├── Services.jsx
+│   │   └── Testimonials.jsx
 │   ├── context/
 │   │   └── ThemeContext.jsx
 │   ├── App.jsx
@@ -107,4 +121,4 @@ This project is licensed under the MIT License.
 ---
 
 **Developer**: Wail Solaiman  
-**Developed with help from**: Cline (AI-assisted coding)
+**Developed with help from**: VS-Code Cline (AI-assisted coding)
