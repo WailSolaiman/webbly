@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import { ThemeContext } from "../context/ThemeContext"
-import { Moon, Sun, Menu } from "lucide-react"
+import { Moon, Sun } from "lucide-react"
 
 const Header = () => {
   const { darkMode, toggleTheme } = useContext(ThemeContext)
